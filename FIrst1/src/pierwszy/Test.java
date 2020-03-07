@@ -8,45 +8,57 @@ public class Test {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String runAgain;
+		int fractionInteger;
+		int numerator;
+		int denominator;
 		
 		do {
-			int numerator = scanner.nextInt();
-			scanner.nextLine();
-			int denominator = scanner.nextInt();
-			scanner.nextLine();
-			Fraction x = new Fraction(numerator, denominator);
-			
-			String operation = scanner.nextLine();
-			
+			System.out.println("Podaj czêœæ ca³kowit¹: ");
+			fractionInteger = scanner.nextInt();
+			System.out.println("Podaj mianownik: ");
 			numerator = scanner.nextInt();
-			scanner.nextLine();
+			System.out.println("Podaj licznik: ");
 			denominator = scanner.nextInt();
-			scanner.nextLine();
-			Fraction y = new Fraction(numerator, denominator);
 			
-			Fraction result;
+			Fraction a = new Fraction(fractionInteger, numerator, denominator);
 			
-			switch(operation) {
-				case "+":
-					result = x.add(y);
-					break;
-				case "-":
-					result = x.substract(y);
-					break;
-				case "*":
-					result = x.multiply(y);
-					break;
-				case "/":
-					result = x.divide(y);
-					break;
-				default:
-					System.out.println("B³êdny operator");
-					result = new Fraction(0, 0);
-			}
-			System.out.println("Wynik: " + result);
+			System.out.println("Podaj czêœæ ca³kowit¹: ");
+			fractionInteger = scanner.nextInt();
+			System.out.println("Podaj mianownik: ");
+			numerator = scanner.nextInt();
+			System.out.println("Podaj licznik: ");
+			denominator = scanner.nextInt();
 			
-			System.out.println("Chcesz wykonaæ kolejne dzia³anie? Wpisz literê T lub N");
-			runAgain = scanner.nextLine();
+			Fraction b = new Fraction(fractionInteger, numerator, denominator);
+			
+			Fraction c = new Fraction();
+			
+			System.out.println("Dodawanie: ");
+			c = a.add(b);
+			System.out.println(c.fractionInteger);
+			System.out.println(c.numerator);
+			System.out.println(c.denominator);
+			
+			System.out.println("Odejmowanie: ");
+			c = a.substract(b);
+			System.out.println(c.fractionInteger);
+			System.out.println(c.numerator);
+			System.out.println(c.denominator);
+			
+			System.out.println("Mno¿enie: ");
+			c = a.multiply(b);
+			System.out.println(c.fractionInteger);
+			System.out.println(c.numerator);
+			System.out.println(c.denominator);
+			
+			System.out.println("Dzielenie: ");
+			c = a.divide(b);
+			System.out.println(c.fractionInteger);
+			System.out.println(c.numerator);
+			System.out.println(c.denominator);
+			
+			System.out.println("T - dalej, N - stop");
+			runAgain = scanner.next();
 		} while(runAgain.equals("T"));
 		
 		scanner.close();

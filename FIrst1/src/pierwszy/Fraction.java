@@ -2,9 +2,13 @@ package pierwszy;
 
 public class Fraction {
 	
-	private int fractionInteger;
-	private int numerator;
-	private int denominator;
+	public int fractionInteger;
+	public int numerator;
+	public int denominator;
+	
+	public Fraction() { 
+		
+	}
 	
 	public Fraction(int fractionInteger, int numerator, int denominator) {
 		this.fractionInteger = fractionInteger;
@@ -16,51 +20,101 @@ public class Fraction {
 		if (numerator == denominator) {
 			this.fractionInteger = 1;
 			this.numerator = 0;
-			this.denominator = 1;
-		} else if (numerator > denominator) {
-			this.fractionInteger = numerator / denominator;
-			this.numerator = numerator % denominator;
-			this.denominator = denominator;
-		} else {
+			this.denominator = 0;
+		} else if(numerator < denominator) {
 			this.fractionInteger = 0;
 			this.numerator = numerator;
 			this.denominator = denominator;
+		} else if(numerator > denominator) {
+			this.fractionInteger = numerator / denominator;
+			this.numerator = numerator % denominator;
+			
+			if(numerator % denominator == 0) {
+				this.denominator = 0;
+			} else {
+				this.denominator = denominator;
+			}
 		}
 	}
 	
-	public double getFractionAsDecimal() {
-		return fractionInteger + (double) numerator / denominator;
-	} 
-	
-	public Fraction add(Fraction fraction) {
-		int n1 = this.numerator + this.fractionInteger * this.denominator;
-		int d1 = this.denominator;
-		int n2 = fraction.numerator + fraction.fractionInteger * fraction.denominator;
-		int d2 = fraction.denominator;
-		return new Fraction(n1 * d2 + n2 * d1, d1 * d2);
-	}
-	
-	public Fraction substract(Fraction fraction) {
-		int n1 = this.numerator + this.fractionInteger * this.denominator;
-		int d1 = this.denominator;
-		int n2 = fraction.numerator + fraction.fractionInteger * fraction.denominator;
-		int d2 = fraction.denominator;
-		return new Fraction(n1 * d2 - n2, d1 * d2);
-	}
-	
 	public Fraction multiply(Fraction fraction) {
-		int n1 = this.numerator + this.fractionInteger * this.denominator;
-		int d1 = this.denominator;
-		int n2 = fraction.numerator + fraction.fractionInteger * fraction.denominator;
-		int d2 = fraction.denominator;
-		return new Fraction(n1 * n2, d1 * d2);
+		int num1 = this.numerator;
+		int den1 = this.denominator;
+		int fraInt1 = this.fractionInteger;
+		
+		int num2 = fraction.numerator;
+		int den2 = fraction.denominator;
+		int fraInt2 = fraction.fractionInteger;
+		
+		num1 = fraInt1 * den1 + num1;
+		num2 = fraInt2 * den2 + num2;
+		
+		Fraction result = new Fraction(num1 * num2, den1 * den2);
+		return result;
 	}
 	
 	public Fraction divide(Fraction fraction) {
-		int n1 = this.numerator + this.fractionInteger * this.denominator;
-		int d1 = this.denominator;
-		int n2 = fraction.numerator + fraction.fractionInteger * fraction.denominator;
-		int d2 = fraction.denominator;
-		return new Fraction(n1 / n2, d1 / d2);
+		int num1 = this.numerator;
+		int den1 = this.denominator;
+		int fraInt1 = this.fractionInteger;
+		
+		int num2 = fraction.numerator;
+		int den2 = fraction.denominator;
+		int fraInt2 = fraction.fractionInteger;
+		
+		num1 = fraInt1 * den1 + num1;
+		num2 = fraInt2 * den2 + num2;
+		
+		Fraction result = new Fraction(num1 * den2, num2 * den1);
+		return result;
 	}
+	
+	public Fraction add(Fraction fraction) {
+		int tmp;
+		
+		int num1 = this.numerator;
+		int den1 = this.denominator;
+		int fraInt1 = this.fractionInteger;
+		
+		int num2 = fraction.numerator;
+		int den2 = fraction.denominator;
+		int fraInt2 = fraction.fractionInteger;
+		
+		num1 = fraInt1 * den1 + num1;
+		num2 = fraInt2 * den2 + num2;
+		
+		num1 = num1 * den2;
+		num2 = num2 * den1;
+		tmp = den1;
+		den1 = den1 * den2;
+		den2 = den2 * tmp;
+		
+		Fraction result = new Fraction(num1 + num2, den1);
+		return result;
+	}
+	
+	public Fraction substract(Fraction fraction) {
+		int tmp;
+		
+		int num1 = this.numerator;
+		int den1 = this.denominator;
+		int fraInt1 = this.fractionInteger;
+		
+		int num2 = fraction.numerator;
+		int den2 = fraction.denominator;
+		int fraInt2 = fraction.fractionInteger;
+		
+		num1 = fraInt1 * den1 + num1;
+		num2 = fraInt2 * den2 + num2;
+		
+		num1 = num1 * den2;
+		num2 = num2 * den1;
+		tmp = den1;
+		den1 = den1 * den2;
+		den2 = den2 * tmp;
+		
+		Fraction result = new Fraction(num1 - num2, den1);
+		return result;
+	}
+	
 }
