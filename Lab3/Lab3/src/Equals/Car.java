@@ -25,10 +25,10 @@ public class Car {
 		// false;
 
 		// cast to native object is now safe
-		Car that = (Car) aThat;
+		Car other = (Car) aThat;
 
 		// now a proper field-by-field evaluation can be made
-		return this.year == that.year;
+		return this.year == other.year;
 	}
 
 }
@@ -45,8 +45,14 @@ class BigCar extends Car {
 		if (this == aThat) {
 			return true;
 		}
-		
+		if (!super.equals(aThat)) {
+			return false;
+		}
 		if(!(aThat instanceof BigCar)) {
+			return false;
+		}
+		BigCar other = (BigCar) aThat;
+		if (other.weight != weight) {
 			return false;
 		}
 		return true;
