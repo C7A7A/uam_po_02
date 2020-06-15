@@ -2,6 +2,7 @@ package residents;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -40,7 +41,7 @@ public class Program {
 			Person resident = new Person();
 			
 			System.out.println("Podaj nazwê miasta:");
-			city = scanner.nextLine();
+			city = scanner.next();
 			
 			System.out.println("Podaj imiê, nazwisko i PESEL:");
 			name = scanner.next();
@@ -85,11 +86,18 @@ public class Program {
 							 "PESEL: " + resident.getPesel() + "\n" + "\n"
 							 );
 			}
+			
+			if (!residents.isEmpty()) {
+				File file = new File(file_name);
+				System.out.println("Zapisano dane, œcie¿ka do pliku: " + file.getAbsolutePath());
+			}
+			
 			writer.close();
+			
 		} catch (IOException ioe) {
-			ioe.printStackTrace();
+			
 		}
-		
+
 	}
 
 }

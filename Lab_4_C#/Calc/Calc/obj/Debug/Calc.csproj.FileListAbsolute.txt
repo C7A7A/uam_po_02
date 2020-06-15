@@ -1,0 +1,10 @@
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\bin\Debug\Calc.exe.config
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\bin\Debug\Calc.exe
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\bin\Debug\Calc.pdb
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\obj\Debug\Calc.csprojAssemblyReference.cache
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\obj\Debug\Calc.Calculator.resources
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\obj\Debug\Calc.Properties.Resources.resources
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.cache
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\obj\Debug\Calc.csproj.CoreCompileInputs.cache
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\obj\Debug\Calc.exe
+D:\studia\uam_po\Lab_4_C#\Calc\Calc\obj\Debug\Calc.pdb

@@ -1,5 +1,5 @@
-Miasto: Suchy Las
+Miasto: Owiñska
 Imiê: Mateusz
-Nazwisko: CZajka
+Nazwisko: Czajka
 PESEL: 99070902457
 
