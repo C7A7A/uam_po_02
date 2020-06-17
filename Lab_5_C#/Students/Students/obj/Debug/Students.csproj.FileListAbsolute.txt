@@ -1,0 +1,13 @@
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.csprojAssemblyReference.cache
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.Main.resources
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.Properties.Resources.resources
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.csproj.GenerateResource.cache
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.csproj.CoreCompileInputs.cache
+D:\studia\uam_po\Lab_5_C#\Students\Students\bin\Debug\Students.exe.config
+D:\studia\uam_po\Lab_5_C#\Students\Students\bin\Debug\Students.exe
+D:\studia\uam_po\Lab_5_C#\Students\Students\bin\Debug\Students.pdb
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.exe
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.pdb
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.AddGrade.resources
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.AddStudent.resources
+D:\studia\uam_po\Lab_5_C#\Students\Students\obj\Debug\Students.ShowGrades.resources
